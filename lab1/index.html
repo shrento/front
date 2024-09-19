@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Лизинг водного транспорта">
+    <meta name="description" content="Сайт с информацией о лизинге водного транспорта. Грузовой, пассажирский, промысловый, технический транспорт">
     <title>Лизинг водного транспорта</title>
 </head>
 <body>
@@ -10,14 +12,14 @@
     <header>
         <h1>Лизинг водного транспорта</h1>
         <nav>
-            <table border="0" cellspacing="0" cellpadding="0">
+            <table border="0" cellspacing="0" cellpadding="0"></table>
                 <tr>
-                    <td><button>Главная</button></td>
-                    <td><button>Программы</button></td>
-                    <td><button>Условия</button></td>
-                    <td><button>О нас</button></td>
+                    <td><a href="terms.html">Главная</a></td>
+                    <td><a href="programs.html">Программы</a></td>
+                    <td><a href="terms.html">Условия</a></td>
+                    <td><a href="about-us.html">О нас</a></td>
                 </tr>
-            </table>            
+            </table>
         </nav>
     </header>
 
@@ -99,15 +101,14 @@
         
         <section>
             <pre><code>
-                public AuthenticationProvider authenticationProvider() {
-                    DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-                    provider.setUserDetailsService(shipUserDetailService);
-                    provider.setPasswordEncoder(passwordEncoder());
-                    return provider;
-                }
+public AuthenticationProvider authenticationProvider() {
+    DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+    provider.setUserDetailsService(shipUserDetailService);
+    provider.setPasswordEncoder(passwordEncoder());
+    return provider;
+}
             </code></pre>
         </section>
-
     </main>
     <footer>
         <p>
