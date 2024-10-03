@@ -1,17 +1,21 @@
+html {
+    font-size: 14px;
+}
+
 body {
     background-color: #EBEEF5;
     color:#001133;
     font-family: "Mulish", sans-serif;
-    margin-right:8%;
-    margin-left:8%;
-    margin-bottom:2%;
+    margin-right:50px;
+    margin-left:50px;
+    margin-bottom:2;
     margin-top:3%;
 }
 
 header {
     font-family: "Roboto", sans-serif;
     text-align: center;
-    line-height: 200%;
+    line-height: 2rem;
     background-color: #A7C3FA;
     margin:0;
     padding: 0;
@@ -21,7 +25,8 @@ header {
 
 header > h1 {
     font-weight:355;
-    font-size: 36px;
+    font-size: 3rem;
+    line-height: 0.5rem;
     text-transform: uppercase;
     margin: 20px 0
 }
@@ -35,9 +40,9 @@ header > h1 {
     text-decoration: none;
     margin: 0 15px;
     color: #0D214A;
-    font-size: 18px;
+    font-size: 1.4rem;
     border: 2px solid;
-    border-radius: 20%;
+    border-radius: 25px;
     padding: 8px 10px;
 }
 
@@ -46,8 +51,8 @@ header > h1 {
     margin: 20px auto;
     padding: 10px;
     width: 787px;
-    height: 220px;
-    border-radius: 5%
+    height: auto;
+    border-radius: 5px;
 }
 
 .quote {
@@ -57,14 +62,13 @@ header > h1 {
 }
 
 .quote q {
-    font-size: 20px;
+    font-size: 1.55rem;
     color: #333;
     font-style: italic;
 }
 
 .main-company-description {
-    max-width: 75%; 
-    margin: 5% auto;
+    margin: 50px auto;
     padding: 20px; 
     border: 1px solid #284275; 
     border-radius: 10px;
@@ -77,20 +81,20 @@ header > h1 {
 }
 
 .company-description-header {
-    font-size: 24px;
+    font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 .description-text p {
-    line-height: 1.3;
-    font-size: 1.15em;
+    line-height: 1.3rem;
+    font-size: 1.15rem;
 }
 
 .pros-list ul {
     list-style-type:decimal;
-    line-height: 1.3;
-    font-size: 1.15em;
+    line-height: 1.3rem;
+    font-size: 1.15rem;
 }
 
 .transport-service {
@@ -100,14 +104,14 @@ header > h1 {
 }
 
 .service-header {
-    font-size: 28px;
-    font-weight: bold; 
-    margin-bottom: 2.3em; 
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px; 
     text-align: center;
 }
 
 .transport-card {
-    max-width: 75%;
+    
     border: 1px solid #526CA1;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgb(3, 4, 22);
@@ -135,21 +139,22 @@ header > h1 {
 }
 
 .transport-img {
-    width: 400;
-    height: 260;
+    display: block;
+    width: 400px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 1.3% auto;
+    margin: 10px auto;
 }
 
 footer {
     background-color: #0D214A;
     color: #EBEEF5;
-    padding: 5%;
+    padding: 10px;
     text-align: right;
     margin-top: 40px;
 }
 
 footer p {
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
