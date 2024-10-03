@@ -19,7 +19,7 @@ header {
     border-radius: 5px;
 }
 
-header h1 {
+header > h1 {
     font-weight:355;
     font-size: 36px;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ header h1 {
     padding: 10px 20px
 }
 
-.nav-bar a {
+.nav-bar > a {
     text-decoration: none;
     margin: 0 15px;
     color: #0D214A;
