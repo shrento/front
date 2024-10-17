@@ -176,12 +176,45 @@ header > h1 {
     margin: 10px auto;
 }
 
+.vessel-table {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 3px;
+    margin: 0 30px;
+    margin-bottom: 150px;
+    border: 1px solid #001133;
+    background-color: #A7C3FA;
+}
+
+.vessel-table-header {
+    display: contents
+}
+
+.vessel-table-header .vessel-table-cell{
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.vessel-table-row {
+    display: contents;
+}
+
+.vessel-table-row .vessel-table-cell {
+    text-align: center;
+}
+
+.vessel-table-cell {
+    text-align: center;
+    border: 1px solid #001133;
+    padding: 5px;
+}
+
 footer {
     background-color: #0D214A;
     color: #EBEEF5;
     padding: 8px;
     text-align: right;
-    margin-top: 40px;
     width: 100%;
     position: fixed;
     bottom: 0;
