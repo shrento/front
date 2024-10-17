@@ -131,7 +131,7 @@ header > h1 {
     padding: 0 20px;
 }
 
-.service-header {
+.service-header, .vessel-table-title{
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px; 
@@ -194,6 +194,7 @@ header > h1 {
     text-align: center;
     font-weight: bold;
     padding: 8px;
+    font-size: 1.55rem;
 }
 
 .vessel-table-row {
@@ -202,6 +203,7 @@ header > h1 {
 
 .vessel-table-row .vessel-table-cell {
     text-align: center;
+    font-size: 1.4rem;
 }
 
 .vessel-table-cell {
