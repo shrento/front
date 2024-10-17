@@ -47,6 +47,7 @@ header > h1 {
 
 .nav-bar {
     display: flex;
+    
     flex-wrap: wrap;
     align-content: space-around;
     gap: 10px;
@@ -178,38 +179,44 @@ header > h1 {
 
 .vessel-table {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3px;
     margin: 0 30px;
     margin-bottom: 150px;
     border: 1px solid #001133;
-    background-color: #A7C3FA;
+    
 }
 
-.vessel-table-header {
+.vessel-table thead, .vessel-table tbody, .vessel-table tr {
     display: contents
 }
 
-.vessel-table-header .vessel-table-cell{
+.vessel-table th {
     text-align: center;
     font-weight: bold;
+    border: 1px solid #001133;
     padding: 8px;
     font-size: 1.55rem;
+    background-color:#a6b5d1;
 }
 
-.vessel-table-row {
-    display: contents;
-}
-
-.vessel-table-row .vessel-table-cell {
+.vessel-table tr .vessel-table td {
     text-align: center;
     font-size: 1.4rem;
 }
 
-.vessel-table-cell {
+.vessel-table td {
     text-align: center;
     border: 1px solid #001133;
     padding: 5px;
+}
+
+.vessel-table tbody tr:nth-child(even) td{
+    background-color:#7c97cb;
+}
+
+.vessel-table tbody tr:nth-child(odd) td{
+    background-color:#A7C3FA;
 }
 
 footer {
@@ -230,5 +237,11 @@ footer p {
 @media screen and (max-width: 720px) {
     .head-img {
         display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .nav-bar {
+        flex-direction: column;
     }
 }
