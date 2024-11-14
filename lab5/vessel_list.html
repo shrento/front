@@ -39,13 +39,20 @@
                 <button class="vessel-form-button" type="submit">Добавить судно</button>
             </form>
             <button class="vessel-form-button" onclick="removeLastVessel()">Удалить последнее</button>
-
-            <div class="uploaded-vessels" id="uploaded-vessels">
-            </div>
+            <button class="vessel-form-button" onclick="removeAllVessels()">Удалить Всё</button>
 
             <button class="vessel-form-button" onclick="createFinalVesselTable()">Сохранить таблицу</button>
 
-            <div id="vessel-table-div"></div>
+            <table class="final-vessel-tabel" id="final-vessel-tabel">
+                <thead>
+                    <tr>
+                        <th>Название судна</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
         </article>
     </main>
 

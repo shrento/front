@@ -10,60 +10,68 @@ function uploadVessel() {
     let vesselName = document.getElementById('vessel-name').value.trim();
 
     if (vesselName === '') {
+        window.alert('Введите название судна');
         return;
     }
 
     uploadedVessels.push(vesselName);
-    let uploadedVesselsDiv = document.getElementById('uploaded-vessels');
-    let vesselElement = document.createElement('div');
-    vesselElement.textContent = vesselName;
-    uploadedVesselsDiv.appendChild(vesselElement);
 
     document.getElementById('vessel-name').value='';
+
+    let finalTable = document.getElementById('final-vessel-tabel');
+    let tableBody = finalTable.querySelector('tbody');
+
+    let newRow = tableBody.insertRow();
+    let nameCell = newRow.insertCell(0);
+    nameCell.textContent = vesselName;
+
+    finalTable.style.display = 'table';
 }
 
 function removeLastVessel() {
-    if (uploadedVessels.length == 0)
-        return;
-    
-    uploadedVessels.pop();
-    let uploadedVesselsDiv = document.getElementById('uploaded-vessels');
-    uploadedVesselsDiv.innerHTML = '';
-    uploadedVessels.forEach(vessel => {
-        let vesselElement = document.createElement('div');
-        vesselElement.textContent = vessel;
-        uploadedVesselsDiv.appendChild(vesselElement);
-    });
-
-}
-
-function createFinalVesselTable() {
-    document.getElementById('vessel-table-div').innerHTML = '';
-
     if (uploadedVessels.length == 0) {
         return;
     }
+        
+    uploadedVessels.pop();
 
-    let tableTemplate = document.createElement('template');
-    tableTemplate.innerHTML = `
-        <table class="final-vessel-tabel" id="final-vessel-tabel">
-            <thead>
-                <tr>
-                    <th>Название судна</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${uploadedVessels.map(vessel => `
-                    <tr>
-                        <td>${vessel}</td>
-                    </tr>
-                `).join('')}
-            </tbody>
-        </table>
-    `;
+    let finalTable = document.getElementById('final-vessel-tabel');
+    let tableBody = finalTable.querySelector('tbody');
 
-    document.getElementById('vessel-table-div').appendChild(tableTemplate.content.querySelector('table'));
-    
+    tableBody.innerHTML = '';
+
+    uploadedVessels.forEach(vessel => {
+        let newRow = tableBody.insertRow();
+        let nameCell = newRow.insertCell(0);
+        nameCell.textContent = vessel;
+    });
+
+    finalTable.style.display = 'table';
+
+    if (uploadedVessels.length == 0)
+        finalTable.style.display = 'none';
+
+}
+
+function removeAllVessels() {
+    uploadedVessels = [];
+    document.getElementById('final-vessel-tabel').querySelector('tbody').innerHTML = '';
+    document.getElementById('final-vessel-tabel').style.display = 'none';
+}
+
+function createFinalVesselTable() {
+    let finalTable = document.getElementById('final-vessel-tabel');
+    let tableBody = finalTable.querySelector('tbody');
+
+    tableBody.innerHTML = '';
+
+    uploadedVessels.forEach(vessel => {
+        let newRow = tableBody.insertRow();
+        let nameCell = newRow.insertCell(0);
+        nameCell.textContent = vessel;
+    });
+
+    finalTable.style.display = 'table';
     saveVesselTable();
 }
 
@@ -77,18 +85,7 @@ function loadTableData() {
 
     if (savedVessels.length == 0) {
         return;
-    }
-
-    const uploadedVesselsDiv = document.getElementById('uploaded-vessels');
-    uploadedVesselsDiv.innerHTML = '';
-
-    savedVessels.forEach(vessel => {
-        let vesselElement = document.createElement('div');
-        vesselElement.textContent = vessel;
-        uploadedVesselsDiv.appendChild(vesselElement);
-
-    });
-    
+    }    
     createFinalVesselTable();
 }
 
