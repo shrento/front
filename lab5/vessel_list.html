@@ -33,7 +33,7 @@
     <main>
         <h1 class="list-page-header">Выбор лизинговых судов</h1>
 
-        <article class="vessel-list-article">
+        <article class="vessel-list-article" id="vessel-list-article">
             <form class="vessel-form" id="vessel-form">
                 <input type="text" class="vessel-name" id="vessel-name" name="vesselName" placeholder="Название судна" required>
                 <button class="vessel-form-button" type="submit">Добавить судно</button>
@@ -45,15 +45,7 @@
 
             <button class="vessel-form-button" onclick="createFinalVesselTable()">Сохранить таблицу</button>
 
-            <table class="final-vessel-tabel" id="final-vessel-tabel">
-                <thead>
-                    <tr>
-                        <th>Название судна</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div id="vessel-table-div"></div>
         </article>
     </main>
 

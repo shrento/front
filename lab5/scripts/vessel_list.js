@@ -38,18 +38,32 @@ function removeLastVessel() {
 }
 
 function createFinalVesselTable() {
-    let finalTable = document.getElementById('final-vessel-tabel');
-    let tableBody = finalTable.querySelector('tbody');
+    document.getElementById('vessel-table-div').innerHTML = '';
 
-    tableBody.innerHTML = '';
+    if (uploadedVessels.length == 0) {
+        return;
+    }
 
-    uploadedVessels.forEach(vessel => {
-        let newRow = tableBody.insertRow();
-        let nameCell = newRow.insertCell(0);
-        nameCell.textContent = vessel;
-    });
+    let tableTemplate = document.createElement('template');
+    tableTemplate.innerHTML = `
+        <table class="final-vessel-tabel" id="final-vessel-tabel">
+            <thead>
+                <tr>
+                    <th>Название судна</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${uploadedVessels.map(vessel => `
+                    <tr>
+                        <td>${vessel}</td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    `;
 
-    finalTable.style.display = 'table';
+    document.getElementById('vessel-table-div').appendChild(tableTemplate.content.querySelector('table'));
+    
     saveVesselTable();
 }
 
