@@ -30,26 +30,14 @@ async function loadClients() {
         if (result.status === 'fulfilled') {
             let user = result.value;
             let li = document.createElement('li');
-            let strong = document.createElement('strong');
-            let textNodeName = document.createTextNode(`${user.firstName} ${user.lastName}`);
-            let textNodeEmail = document.createTextNode(`Почта: ${user.email}`);
-            let textNodeCompanyAddress = document.createTextNode(`Адрес: ${user.company.address.address}, 
-                ${user.company.address.city}, ${user.company.address.state}, 
-                ${user.company.address.postalCode}, ${user.company.address.country}`);
-            let textNodePhone = document.createTextNode(`Номер горячей линии: ${user.phone}`);
-            let textNodeCompany = document.createTextNode(`Компания: ${user.company.name}`);
-
-            strong.appendChild(textNodeName);
-            li.appendChild(strong);
-            li.appendChild(document.createElement('br'));
-            li.appendChild(textNodeEmail);
-            li.appendChild(document.createElement('br'));
-            li.appendChild(textNodeCompanyAddress);
-            li.appendChild(document.createElement('br'));
-            li.appendChild(textNodePhone);
-            li.appendChild(document.createElement('br'));
-            li.appendChild(textNodeCompany);
-
+            li.innerHTML = `
+                <strong>${user.firstName} ${user.lastName}</strong><br>
+                Почта: ${user.email}<br>
+                Адрес: ${user.company.address.address}, ${user.company.address.city}, 
+                ${user.company.address.state}, ${user.company.address.postalCode}, ${user.company.address.country}<br>
+                Номер горячей линии: ${user.phone}<br>
+                Компания: ${user.company.name}
+            `;
             clientsList.appendChild(li);
         } else if (result.status === 'rejected') {
             let errorMessage = document.createElement('div');
