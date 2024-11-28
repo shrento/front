@@ -1,0 +1,138 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #EBEEF5;
+    color:#001133;
+    font-family: "Mulish", sans-serif;
+    margin-right:0;
+    margin-left:0;
+    margin-bottom:0;
+    margin-top:15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    line-height: 2rem;
+    background-color: #A7C3FA;
+    margin: 16px;
+    padding: 16px;
+    border: 1px solid #152b57;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+header > h1 {
+    font-weight:355;
+    font-size: 3rem;
+    line-height: 2.9rem;
+    text-transform: uppercase;
+    margin: 20px 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.nav-bar {
+    display: flex;
+    
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    padding: 12px 20px
+}
+
+.nav-bar > a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #0D214A;
+    font-size: 1.4rem;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 8px 10px;
+}
+
+.nav-bar a.active {
+    border: 2px solid #0d214a9e; 
+}
+
+.transport-programs {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-self: center;
+    flex-grow: 1;
+
+    max-width: 1900px;
+    padding: 0 20px;
+}
+
+.programs-header{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px; 
+    text-align: center;
+}
+
+.program-card {
+    flex-grow: 1;
+
+    border: 1px solid #526CA1;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(3, 4, 22);
+    text-align: left;
+    margin-bottom: 5%;
+    max-width: 400px;
+}
+
+.program-description li {
+    list-style-type: circle;
+}
+
+.program-type-header {
+    font-size: 1.5rem;
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 0.5rem; 
+    margin-top: 0.4rem;
+}
+
+.program-description {
+    font-size: 1.1rem; 
+    line-height: 1.2; 
+    margin-bottom: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+footer {
+    background-color: #0D214A;
+    color: #EBEEF5;
+    padding: 8px;
+    text-align: right;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+    padding-right: 13px;
+}
