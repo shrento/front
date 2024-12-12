@@ -106,3 +106,16 @@ footer p {
     font-size: 0.9rem;
     padding-right: 13px;
 }
+
+
+.slider {
+    background: #EEE;
+    width: 1100px;
+    height: 400px;
+    margin: 30px auto;
+  }
+  
+.slider img {
+    display: block;
+    height: 400px;
+}
