@@ -1,3 +1,6 @@
+import 'video.js/dist/video-js.css';
+import videojs from 'video.js';
+
 var options = {
   preload: "auto",
   fluit: true,
