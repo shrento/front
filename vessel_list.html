@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Лизинг водного транспорта">
+    <meta name="description" content="Сайт с информацией о лизинге водного транспорта. Грузовой, пассажирский, промысловый, технический транспорт">
+    <title>Лизинг водного транспорта</title>
+    <link rel="stylesheet" href="styles/vessel_list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="scripts/menu_highlight.js" defer></script>
+    <script type="module" src="scripts/listener.js" defer></script>
+    <script type="module" src="scripts/vessel_list.js" defer></script>
+</head>
+
+<header>
+    <h1 class="page-tittle">Лизинг водного транспорта</h1>
+    
+    <nav class="nav-bar">
+        <a href="index.html">Главная</a>
+        <a href="programs.html">Программы</a>
+        <a href="terms.html">Условия</a>
+        <a href="about.html">О нас</a>
+        <a href="vessel_list.html">Выбор судов</a>
+        <a href="clients.html">Клиенты</a>
+    </nav>
+</header>
+
+
+
+<body>
+    <main>
+        <h1 class="list-page-header">Выбор лизинговых судов</h1>
+
+        <article class="vessel-list-article" id="vessel-list-article">
+            <form class="vessel-form" id="vessel-form">
+                <input type="text" class="vessel-name" id="vessel-name" name="vesselName" placeholder="Название судна" required>
+                <button class="vessel-form-button" type="submit">Добавить судно</button>
+            </form>
+            <button class="vessel-form-button" onclick="removeLastVessel()">Удалить последнее</button>
+            <button class="vessel-form-button" onclick="removeAllVessels()">Удалить Всё</button>
+
+            <button class="vessel-form-button" onclick="createFinalVesselTable()">Сохранить таблицу</button>
+
+            <table class="final-vessel-tabel" id="final-vessel-tabel">
+                <thead>
+                    <tr>
+                        <th>Название судна</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+            117900, г. Санкт-Петербург, ул. Правды, д. 19
+        </p>
+    </footer>
+</body>
+</html>
